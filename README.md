@@ -129,17 +129,7 @@ Automated login/logout for DAU's captive Wi-Fi portal via a Python + systemd dae
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ParamSavjani&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub stats" height="165"/>
-  <img src="https://streak-stats.demolab.com?user=ParamSavjani&theme=radical&hide_border=true" alt="GitHub streak" height="165"/>
-</p>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ParamSavjani&layout=compact&theme=radical&hide_border=true" alt="Top Languages"/>
-</p>
-
-### 🏆 Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ParamSavjani&theme=radical&no-frame=true&row=1&column=7" alt="GitHub Trophies"/>
+  <img src="https://streak-stats.demolab.com?user=ParamSavjani&theme=radical&hide_border=true" alt="GitHub streak"/>
 </p>
 
 ---
