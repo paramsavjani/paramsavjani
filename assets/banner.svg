@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">Param Savjani — Backend Engineer</title>
+  <desc id="desc">Backend, distributed systems and system design. An animated request flows through a client, gateway, service, cache, database, queue and worker.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#21262d"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.18" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#1f6feb" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#1f6feb" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="card"><rect width="1000" height="300" rx="16"/></clipPath>
+    <filter id="soft" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#484f58"/>
+    </marker>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; }
+      .wire { fill: none; stroke: #30363d; stroke-width: 1.5; }
+      .wire.async { stroke-dasharray: 5 4; animation: flow 1.2s linear infinite; }
+      .wire.obs { stroke-dasharray: 2 4; }
+      .box { fill: #161b22; stroke-width: 1.5; }
+      .label { font-size: 13px; fill: #e6edf3; text-anchor: middle; font-weight: 600; }
+      .sub { font-size: 9.5px; fill: #7d8590; text-anchor: middle; }
+      .chip { fill: #161b22; stroke: #30363d; }
+      .chip-text { font-size: 12px; fill: #c9d1d9; }
+      .cursor { animation: blink 1.1s steps(1) infinite; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+      @keyframes flow { to { stroke-dashoffset: -18; } }
+    </style>
+  </defs>
+
+  <!-- card -->
+  <g clip-path="url(#card)">
+    <rect width="1000" height="300" fill="#0d1117"/>
+    <rect width="1000" height="300" fill="url(#grid)"/>
+    <rect width="1000" height="300" fill="url(#glow)"/>
+    <rect width="1000" height="36" fill="#161b22"/>
+    <line x1="0" y1="36.5" x2="1000" y2="36.5" stroke="#30363d"/>
+  </g>
+  <rect x="0.5" y="0.5" width="999" height="299" rx="16" fill="none" stroke="#30363d"/>
+
+  <!-- window chrome -->
+  <circle cx="22" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="18" r="6" fill="#28c840"/>
+  <text x="500" y="22.5" class="mono" font-size="12" fill="#7d8590" text-anchor="middle">param@prod: ~/systems — zsh</text>
+
+  <!-- left: identity -->
+  <text x="48" y="84" class="mono" font-size="14"><tspan fill="#3fb950">❯</tspan><tspan fill="#e6edf3" dx="8">whoami</tspan></text>
+  <rect x="121" y="72" width="8" height="15" fill="#58a6ff" class="cursor"/>
+  <text x="46" y="138" class="sans" font-size="46" font-weight="700" fill="#f0f6fc">Param Savjani</text>
+  <text x="48" y="172" class="sans" font-size="17" font-weight="600" fill="#58a6ff">Backend · Distributed Systems · System Design</text>
+  <text x="48" y="200" class="mono" font-size="13" fill="#7d8590">// building backends that don't fall over</text>
+
+  <g class="mono">
+    <rect x="48" y="224" width="63" height="26" rx="13" class="chip"/>
+    <text x="79.5" y="241" class="chip-text" text-anchor="middle">kotlin</text>
+    <rect x="119" y="224" width="99" height="26" rx="13" class="chip"/>
+    <text x="168.5" y="241" class="chip-text" text-anchor="middle">spring-boot</text>
+    <rect x="226" y="224" width="92" height="26" rx="13" class="chip"/>
+    <text x="272" y="241" class="chip-text" text-anchor="middle">postgresql</text>
+    <rect x="326" y="224" width="106" height="26" rx="13" class="chip"/>
+    <text x="379" y="241" class="chip-text" text-anchor="middle">event-driven</text>
+  </g>
+
+  <!-- right: architecture panel -->
+  <rect x="496" y="54" width="480" height="228" rx="12" fill="#0d1117" fill-opacity="0.75" stroke="#21262d"/>
+  <text x="514" y="76" class="mono" font-size="11" fill="#6e7681">~/systems/request-path</text>
+
+  <!-- wires -->
+  <path class="wire" d="M600,115 H632" marker-end="url(#arrow)"/>
+  <path class="wire" d="M718,115 H750" marker-end="url(#arrow)"/>
+  <path class="wire" d="M836,115 H868" marker-end="url(#arrow)"/>
+  <path class="wire async" d="M794,136 V186" marker-end="url(#arrow)"/>
+  <path class="wire async" d="M836,209 H868" marker-end="url(#arrow)"/>
+  <path class="wire async" d="M912,188 V138" marker-end="url(#arrow)"/>
+  <path class="wire" d="M770,136 V162 H690 V186" marker-end="url(#arrow)"/>
+  <path class="wire obs" d="M650,136 V162 H558 V186" marker-end="url(#arrow)"/>
+
+  <!-- packets (drawn under nodes so they disappear while "processing") -->
+  <g>
+    <circle r="7" fill="#58a6ff" opacity="0.5" filter="url(#soft)"/>
+    <circle r="3.5" fill="#58a6ff"/>
+    <animateMotion dur="2.6s" repeatCount="indefinite" path="M558,115 H912"/>
+  </g>
+  <g>
+    <circle r="7" fill="#bc8cff" opacity="0.5" filter="url(#soft)"/>
+    <circle r="3.5" fill="#bc8cff"/>
+    <animateMotion dur="3.2s" begin="1.2s" repeatCount="indefinite" path="M794,115 V209 H912 V115"/>
+  </g>
+  <g>
+    <circle r="7" fill="#f0883e" opacity="0.5" filter="url(#soft)"/>
+    <circle r="3.5" fill="#f0883e"/>
+    <animateMotion dur="1.8s" begin="0.6s" repeatCount="indefinite" path="M770,115 V162 H690 V209"/>
+  </g>
+  <g>
+    <circle r="2.5" fill="#7d8590"/>
+    <animateMotion dur="2.4s" begin="0.3s" repeatCount="indefinite" path="M650,115 V162 H558 V209"/>
+  </g>
+
+  <!-- nodes: row 1 (sync request path) -->
+  <g class="mono">
+    <rect x="516" y="94" width="84" height="42" rx="8" class="box" stroke="#7d8590"/>
+    <text x="558" y="112" class="label">client</text>
+    <text x="558" y="127" class="sub">web · mobile</text>
+
+    <rect x="634" y="94" width="84" height="42" rx="8" class="box" stroke="#58a6ff"/>
+    <text x="676" y="112" class="label">gateway</text>
+    <text x="676" y="127" class="sub">auth · limits</text>
+
+    <rect x="752" y="94" width="84" height="42" rx="8" class="box" stroke="#3fb950"/>
+    <text x="794" y="112" class="label">service</text>
+    <text x="794" y="127" class="sub">spring boot</text>
+
+    <rect x="870" y="94" width="84" height="42" rx="8" class="box" stroke="#f0883e"/>
+    <text x="912" y="112" class="label">postgres</text>
+    <text x="912" y="127" class="sub">acid txns</text>
+
+    <!-- row 2 (cache, async, observability) -->
+    <rect x="516" y="188" width="84" height="42" rx="8" class="box" stroke="#484f58"/>
+    <text x="558" y="206" class="label">metrics</text>
+    <text x="558" y="221" class="sub">grafana</text>
+
+    <rect x="634" y="188" width="84" height="42" rx="8" class="box" stroke="#d29922"/>
+    <text x="676" y="206" class="label">cache</text>
+    <text x="676" y="221" class="sub">read-through</text>
+
+    <rect x="752" y="188" width="84" height="42" rx="8" class="box" stroke="#bc8cff"/>
+    <text x="794" y="206" class="label">queue</text>
+    <text x="794" y="221" class="sub">at-least-once</text>
+
+    <rect x="870" y="188" width="84" height="42" rx="8" class="box" stroke="#bc8cff"/>
+    <text x="912" y="206" class="label">worker</text>
+    <text x="912" y="221" class="sub">retry · dlq</text>
+  </g>
+
+  <!-- legend + health -->
+  <g class="mono" font-size="10.5" fill="#7d8590">
+    <line x1="516" y1="261" x2="540" y2="261" stroke="#484f58" stroke-width="1.5"/>
+    <text x="546" y="265">sync</text>
+    <line x1="584" y1="261" x2="608" y2="261" stroke="#484f58" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="614" y="265">async</text>
+    <line x1="658" y1="261" x2="682" y2="261" stroke="#484f58" stroke-width="1.5" stroke-dasharray="2 4"/>
+    <text x="688" y="265">telemetry</text>
+    <circle cx="827" cy="261" r="4" fill="#3fb950" class="pulse"/>
+    <text x="837" y="265" fill="#3fb950">all systems up</text>
+  </g>
+</svg>
